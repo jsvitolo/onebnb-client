@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DropdownModule, AlertModule, ButtonsModule, DatePickerComponent,
-         DatepickerModule, CollapseModule, ModalModule } from 'ng2-bootstrap';
+         DatepickerModule, CollapseModule, ModalModule,
+         PaginationModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -20,6 +21,7 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './shared/search/search.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
+import { FilterComponent } from './shared/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     UserEditComponent,
     ResultsComponent,
     SearchComponent,
-    PaginationComponent
+    PaginationComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     DropdownModule.forRoot(),
     CollapseModule,
     DatepickerModule.forRoot(),
+    PaginationModule.forRoot()
   ],
   providers: [PropertiesService, Angular2TokenService],
   bootstrap: [AppComponent]
